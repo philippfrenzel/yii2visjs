@@ -128,14 +128,13 @@ class yii2visjs extends elWidget
         //lets check if we have an event for the calendar...
         if(count($this->dataSet)>0)
         {
-            $jsonDataSet = Json::encode($dataSet);
+            $jsonDataSet = Json::encode($this->dataSet);
             $js[] = "var data$id = new vis.DataSet($jsonDataSet);";
         }
 
         $visualization = $this->visualization;
         
-        $js[] = "var options$id = $cleanOptions;";
-        $js[] = "var timeline$id = new vis.$visualization(container$id, data$id, options$id);";
+        $js[] = "var timeline$id = new vis.$visualization(container$id, data$id, $cleanOptions);";
 
 
         $view->registerJs(implode("\n", $js),View::POS_READY);
@@ -146,12 +145,7 @@ class yii2visjs extends elWidget
      */
     protected function getClientOptions()
     {
-        $id = $this->options['id'];
-        /*$options['loading'] = new JsExpression("function(isLoading, view ) {
-                $('#{$id}').find('.fc-loading').toggle(isLoading);
-        }");*/
-        $options = array_merge($options, $this->clientOptions);
-        return Json::encode($options);
+        return Json::encode($this->clientOptions);
     }
 
 }
