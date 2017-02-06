@@ -32,6 +32,7 @@ Changelog
 ---------
 
 06-02-2017 Move to latest 4.16.1 Version of VIS Library
+
 29-11-2014 Updated to latest 2.2.3 Version of the library
 
 Usage
