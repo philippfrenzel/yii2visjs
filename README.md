@@ -9,9 +9,6 @@ JQuery Documentation:
 http://visjs.org/docs/index.html
 Yii2 Extension by <philipp@frenzel.net>
 
-A tiny sample can be found here:
-http://yii2fullcalendar.beeye.org
-
 [![Latest Stable Version](https://poser.pugx.org/philippfrenzel/yii2visjs/v/stable.svg)](https://packagist.org/packages/philippfrenzel/yii2visjs)
 [![Build Status](https://travis-ci.org/philippfrenzel/yii2visjs.svg?branch=master)](https://travis-ci.org/philippfrenzel/yii2visjs)
 [![Code Climate](https://codeclimate.com/github/philippfrenzel/yii2visjs.png)](https://codeclimate.com/github/philippfrenzel/yii2visjs)
@@ -34,6 +31,7 @@ And ensure, that you have the follwing plugin installed global:
 Changelog
 ---------
 
+06-02-2017 Move to latest 4.16.1 Version of VIS Library
 29-11-2014 Updated to latest 2.2.3 Version of the library
 
 Usage
@@ -74,12 +72,5 @@ AJAX Usage
 If you wanna use ajax loader, this could look like this:
 
 ```php
-<?= yii2visjs\yii2visjs::widget([
-      'options' => [
-        'language' => 'de',
-        //... more options to be defined here!
-      ],
-      'ajaxEvents' => Url::to(['/timetrack/default/jsoncalendar'])
-    ]);
-?>
+TBD
 ```
